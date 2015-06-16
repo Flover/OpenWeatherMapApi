@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MilaPogoda.pl</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script src="bower_components/jquery/dist/jquery.js"></script>
+	  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<script src="js/data.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+	      <div class="navbar-header">
+	        <h2 class="navbar-text">MilaPogoda.pl</h2>
+	      </div>
+	    </div>
+	  </nav>
+	  <div class="container">
+	    <div class="row">
+	    	<h2>Punkt pierwszy</h2>
+	      <form id="input-data1">
+	        <div id="latitude1div" class="form-group col-xs-6">
+	          <label for="latitude1">Szerokość geograficzna</label><br/>
+	          <input type="text" name="latitude1" class="form-control"
+							placeholder="Wprowadź wartość z przedziału < -90, 90 >"
+							id="latitude1" >
+	        </div>
+	        <div id="longitude1div" class="form-group col-xs-6">
+	          <label for="longitude1">Długość geograficzna</label> <br/>
+	          <input type="text" name="longitude1" class="form-control"
+							placeholder="Wprowadź wartość z przedziału < -180, 180 >"
+							id="longitude1">
+	        </div>
+	      </form>
+	      <h2>Punkt drugi</h2>
+	      <form id="input-data2">
+	        <div id="latitude2div" class="form-group col-xs-6">
+	          <label for="latitude2">Szerokość geograficzna</label><br/>
+	          <input type="text" name="latitude2" class="form-control"
+							placeholder="Wprowadź wartość z przedziału < -90, 90 >"
+							id="latitude2">
+	        </div>
+	        <div id="longitude2div" class="form-group col-xs-6">
+	          <label for="longitude2">Długość geograficzna</label> <br/>
+	          <input type="text" name="longitude2" class="form-control"
+							placeholder="Wprowadź wartość z przedziału < -180, 180 >"
+							id="longitude2">
+	        </div>
+	      </form>
+	      <br/><a class="btn btn-danger getNewData" disabled="disabled" href="#"
+					role="button">Pobierz informacje</a>
+
+	      <div class="average"></div> <br/>
+	      <table class="table table-striped table-bordered">
+	        <thead>
+	          <tr class="header">
+	              <th>#</id>
+	              <th data-field="station">Stacja</th>
+	              <th data-field="temperature">Temperatura</th>
+	            <!--   <th data-field="conditions">Warunki atmosferyczne</th> --> <!-- ONLY FOR WEATHER INFORMATIONS FOR CITIES -->
+	          </tr>
+	        </thead>
+	        <tbody class="data">
+	        </tbody>
+	      </table>
+	    </div>
+		</div>
+	</body>
+</html>
